@@ -311,4 +311,4 @@ pytest tests/ -v
 
 ## License
 
-[MIT](LICENSE) © 2024 [Raghavendra Raju Palagani](https://github.com/raghavendra-24)
+[MIT](LICENSE) © 2026 [Raghavendra Raju Palagani](https://github.com/raghavendra-24)
