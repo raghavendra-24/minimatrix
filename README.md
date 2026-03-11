@@ -31,6 +31,10 @@ A.determinant(verbose=True)
 ─────────────────────────────────────────────────────
   determinant()  —  3×3 matrix
 ─────────────────────────────────────────────────────
+  Row 0: [6.0, 1.0, 1.0]
+  Row 1: [4.0, -2.0, 5.0]
+  Row 2: [2.0, 8.0, 7.0]
+
   Using LU decomposition with partial pivoting (Doolittle):
 
   Permutation vector P = [0, 2, 1]
@@ -38,12 +42,12 @@ A.determinant(verbose=True)
 
   Upper-triangular U diagonal:
     U[0,0] = 6
-    U[1,1] = 8.5
-    U[2,2] = 6.0
+    U[1,1] = 7.66667
+    U[2,2] = 6.65217
 
   det = sign × ∏ U[i,i]
-      = -1 × -306.0
-      = -306.0
+      = -1 × 306
+      = -306
 ─────────────────────────────────────────────────────
 ```
 
