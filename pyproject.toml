@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "minimatrix"
+name = "matrixa"
 version = "0.2.0"
-description = "A pure-Python linear algebra library with a custom Matrix type — built for learning, correctness, and elegance."
+description = "A pure-Python linear algebra library — no dependencies, built for learning and correctness."
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
@@ -40,4 +40,4 @@ Issues     = "https://github.com/raghavendra-24/minimatrix/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["minimatrix*"]
+include = ["matrixa*"]

@@ -1,5 +1,5 @@
 """
-tests/test_matrix.py – Full pytest test suite for minimatrix v0.2.0
+tests/test_matrix.py – Full pytest test suite for matrixa v0.2.0
 
 Run with:  pytest tests/ -v
 """
@@ -8,8 +8,8 @@ import math
 import pytest
 from fractions import Fraction
 
-from minimatrix import Matrix
-from minimatrix.matrix.utils import (
+from matrixa import Matrix
+from matrixa.matrix.utils import (
     apply, element_wise, from_flat, diag,
     is_symmetric, is_identity, frobenius_norm,
 )
@@ -525,7 +525,7 @@ class TestFractionDtype:
 
 class TestGraphics:
     def test_rotation_2d_90(self):
-        from minimatrix.applications import rotation_2d
+        from matrixa.applications import rotation_2d
         R = rotation_2d(90)
         p = Matrix([[1.0], [0.0]])
         Rp = R @ p
@@ -533,12 +533,12 @@ class TestGraphics:
         assert Rp[1, 0] == pytest.approx(1.0, abs=1e-9)
 
     def test_rotation_2d_identity(self):
-        from minimatrix.applications import rotation_2d
+        from matrixa.applications import rotation_2d
         R = rotation_2d(0)
         assert R == Matrix.identity(2)
 
     def test_scale_2d(self):
-        from minimatrix.applications import scale
+        from matrixa.applications import scale
         S = scale(2, 3)
         assert S.shape == (2, 2)
         p = Matrix([[1.0], [1.0]])
@@ -547,7 +547,7 @@ class TestGraphics:
         assert Sp[1, 0] == pytest.approx(3.0)
 
     def test_shear_2d(self):
-        from minimatrix.applications import shear_2d
+        from matrixa.applications import shear_2d
         Sh = shear_2d(shx=1.0)
         p = Matrix([[1.0], [1.0]])
         Shp = Sh @ p
@@ -555,7 +555,7 @@ class TestGraphics:
         assert Shp[1, 0] == pytest.approx(1.0)
 
     def test_translate_homogeneous(self):
-        from minimatrix.applications import homogeneous_translate_2d
+        from matrixa.applications import homogeneous_translate_2d
         T = homogeneous_translate_2d(3, -1)
         p = Matrix([[2.0], [4.0], [1.0]])
         Tp = T @ p
@@ -563,14 +563,14 @@ class TestGraphics:
         assert Tp[1, 0] == pytest.approx(3.0)
 
     def test_reflect_x(self):
-        from minimatrix.applications import reflect_2d
+        from matrixa.applications import reflect_2d
         R = reflect_2d('x')
         p = Matrix([[1.0], [1.0]])
         Rp = R @ p
         assert Rp[1, 0] == pytest.approx(-1.0)
 
     def test_3d_rotation_x_90(self):
-        from minimatrix.applications import rotation_3d_x
+        from matrixa.applications import rotation_3d_x
         R = rotation_3d_x(90)
         p = Matrix([[0.0], [1.0], [0.0]])
         Rp = R @ p

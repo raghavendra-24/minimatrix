@@ -1,10 +1,10 @@
 <div align="center">
 
-<h1>minimatrix</h1>
+<h1>matrixa</h1>
 
 <p><strong>A pure-Python matrix library — no dependencies, built for learning and correctness.</strong></p>
 
-[![PyPI version](https://img.shields.io/pypi/v/minimatrix?color=blue)](https://pypi.org/project/minimatrix/)
+[![PyPI version](https://img.shields.io/pypi/v/matrixa?color=blue)](https://pypi.org/project/matrixa/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-110%20passed-brightgreen)](#)
@@ -13,12 +13,12 @@
 
 ---
 
-**minimatrix** gives Python a first-class `Matrix` type that works the way you'd expect —
+**matrixa** gives Python a first-class `Matrix` type that works the way you'd expect —
 supporting operator overloading, multiple numeric types, NumPy-style slicing, and, uniquely,
 a **verbose "show your work" mode** that prints the algorithm as it runs.
 
 ```python
-from minimatrix import Matrix
+from matrixa import Matrix
 
 A = Matrix([[6, 1, 1],
             [4, -2, 5],
@@ -49,14 +49,14 @@ A.determinant(verbose=True)
 
 ---
 
-## Why minimatrix?
+## Why matrixa?
 
-Most matrix libraries are black boxes. **minimatrix is a glass box.**
+Most matrix libraries are black boxes. **matrixa is a glass box.**
 
 It is aimed at students, educators, and engineers who want to understand what
 the algorithm is doing — not just get an answer. Every operation can explain itself.
 
-| | minimatrix | NumPy |
+| | matrixa | NumPy |
 |---|---|---|
 | Dependencies | **Zero** | C compiler + BLAS |
 | `verbose=True` step-by-step mode | ✅ | ❌ |
@@ -64,7 +64,7 @@ the algorithm is doing — not just get an answer. Every operation can explain i
 | LaTeX export | ✅ | ❌ |
 | GPU / large-data performance | ❌ | ✅ |
 
-> Use minimatrix when you want to **understand** the math.  
+> Use matrixa when you want to **understand** the math.  
 > Use NumPy when you need to **crunch** the math.
 
 ---
@@ -72,7 +72,7 @@ the algorithm is doing — not just get an answer. Every operation can explain i
 ## Installation
 
 ```bash
-pip install minimatrix
+pip install matrixa
 ```
 
 Python 3.8+ — no other dependencies required.
@@ -82,7 +82,7 @@ Python 3.8+ — no other dependencies required.
 ## Quick Start
 
 ```python
-from minimatrix import Matrix
+from matrixa import Matrix
 
 # ── Construction ──────────────────────────────
 A = Matrix([[1, 2],
@@ -194,7 +194,7 @@ A.norm(2)          # spectral norm   (power iteration)
 ## 2D / 3D Graphics Transforms
 
 ```python
-from minimatrix.applications import (
+from matrixa.applications import (
     rotation_2d, rotation_3d_x,
     scale, shear_2d, reflect_2d,
     homogeneous_translate_2d,
@@ -264,7 +264,7 @@ Matrix.ones(rows, cols, dtype)    # ones matrix
 | `A.cofactor(r, c)` | `float` |
 | `A.adjugate()` | `Matrix` |
 
-### Utilities (`from minimatrix.matrix.utils import ...`)
+### Utilities (`from matrixa.matrix.utils import ...`)
 
 ```python
 apply(mat, func)               # element-wise unary function
@@ -281,7 +281,7 @@ frobenius_norm(mat)            # float
 ## Project Structure
 
 ```
-minimatrix/
+matrixa/
 ├── __init__.py
 ├── matrix/
 │   ├── core.py           Matrix class, dtype, slicing, LaTeX, visualize
@@ -299,10 +299,10 @@ tests/
 ## Contributing
 
 Contributions, bug reports, and feature requests are welcome!  
-Open an issue at [github.com/raghavendra-24/minimatrix/issues](https://github.com/raghavendra-24/minimatrix/issues).
+Open an issue at [github.com/raghavendra-24/matrixa/issues](https://github.com/raghavendra-24/matrixa/issues).
 
 ```bash
-git clone https://github.com/raghavendra-24/minimatrix
+git clone https://github.com/raghavendra-24/matrixa
 pip install -e ".[dev]"     # installs pytest
 pytest tests/ -v
 ```

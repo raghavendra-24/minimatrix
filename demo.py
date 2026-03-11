@@ -1,5 +1,5 @@
 """
-examples/demo.py – End-to-end demonstration of minimatrix.
+examples/demo.py – End-to-end demonstration of matrixa.
 
 Run from the project root:
     python examples/demo.py
@@ -9,8 +9,8 @@ import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 import math
-from minimatrix import Matrix
-from minimatrix.matrix.utils import apply, diag, from_flat, frobenius_norm, is_symmetric
+from matrixa import Matrix
+from matrixa.matrix.utils import apply, diag, from_flat, frobenius_norm, is_symmetric
 
 
 def section(title: str) -> None:
