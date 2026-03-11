@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minimatrix"
+version = "0.2.0"
+description = "A pure-Python linear algebra library with a custom Matrix type — built for learning, correctness, and elegance."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Raghavendra Raju Palagani", email = "raghavendrapalagani671@gmail.com" }
+]
+keywords = [
+    "matrix", "linear-algebra", "mathematics", "education",
+    "fraction", "pure-python", "linalg"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Development Status :: 4 - Beta",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[project.urls]
+Homepage   = "https://github.com/raghavendra-24/minimatrix"
+Repository = "https://github.com/raghavendra-24/minimatrix"
+Issues     = "https://github.com/raghavendra-24/minimatrix/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["minimatrix*"]
